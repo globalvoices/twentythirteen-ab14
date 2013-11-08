@@ -16,3 +16,141 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import url("../twentythirteen/style.css");
 
+/*Google fonts for 'Droid Arabic Kufi' and 'Ubuntu'*/
+@import  "http://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
+@import  "http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic";
+
+/*http://www.google.com/fonts/earlyaccess*/
+/*In-Post RTL classes*/
+
+/*Make default and .rtl text use Droid Arabic*/
+.rtl,
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Droid Arabic Kufi', 'Ubuntu';
+}
+/*Use Ubuntu for LTR and override heading font*/
+.ltr,
+.ltr h1, .ltr h2, .ltr h3, .ltr h4, .ltr h5 {
+	font-family: 'Ubuntu', sans-serif;
+}
+/*Inherit font-family for things with specified font that we want to be Droid Arabic*/
+.site-description {
+	font-family: inherit !important;
+}
+/*Make bold stuff 100 to use light versions of Droid Arabic and Ubuntu*/
+h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
+	font-weight: 100;
+}
+/*General LTR class for use in posts/widgets*/
+.ltr {
+	text-align: left;
+	direction: ltr;
+}
+/*In-post RTL classes for LTR posts*/
+.entry .arabic,
+.entry .hebrew,
+.entry .rtl {
+	text-align: right;
+	direction: rtl;
+}
+/*Site title text size*/
+h1 {
+	font-size: 40px;
+}
+
+/*Insert our logo in the site header*/
+.site-header .home-link {
+	background-image: url(ab14-logo-400.png);
+	background-size: 129px;
+	background-position: 28px center;
+	background-repeat: no-repeat;
+	padding-left: 170px; /*Space for logo*/
+}
+
+/*Make quote text reasonable*/
+.entry-content blockquote {
+	font-size: 20px;
+}
+
+/*Fix header menu so search, pages and menu button fit right*/
+.site-header .search-form {
+	right: auto;
+	left: 20px;
+}
+ul.nav-menu, div.nav-menu > ul {
+	padding: 0 0 0 40px;
+}
+.menu-toggle {
+	padding-right: 20px;
+}
+
+
+@media (max-width: 999px) {
+	/*Make header icon, title and desc smaller*/
+	.site-header .home-link {
+		min-height: 140px;
+		max-width: 680px;
+		background-size: 100px;
+		padding-left: 142px; /*Space for logo*/
+	}
+	.site-title {
+		font-size: 36px;
+		padding-top: 24px;
+	}
+	.site-description {
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 643px) {
+
+}
+
+@media (max-width: 560px) {
+	/*Make header icon, title and desc smaller*/	
+	.site-header .home-link {
+		min-height: 120px;
+		max-width: 680px;
+		background-size: 80px;
+		padding-left: 122px; /*Space for logo*/
+	}
+	.site-title {
+		font-size: 28px;
+		padding-top: 24px;
+	}
+	.site-description {
+		font-size: 16px;
+	}
+}
+@media (max-width: 450px) {
+	/*Make header icon, title and desc smaller*/	
+	.site-header .home-link {
+		min-height: 100px;
+		max-width: 680px;
+		background-size: 60px;
+		padding-left: 102px; /*Space for logo*/
+	}
+	.site-title {
+		font-size: 24px;
+	}
+	.site-description {
+		font-size: 14px;
+	}	
+}
+@media (max-width: 400px) {
+	/*Make header icon, title and desc smaller*/	
+	.site-title {
+		font-size: 20px;
+	}
+	.site-description {
+		font-size: 14px;
+	}	
+}
+@media (max-width: 359px) {
+	
+}
+
+#wpadminbar {
+	z-index: -1 !important;
+}
+
