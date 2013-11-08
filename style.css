@@ -60,11 +60,13 @@ h1 {
 
 /*Insert our logo in the site header*/
 .site-header .home-link {
-	background-image: url(ab14-logo-400.png);
+	background-image: url(ab14-logo-400-shadow.png);
 	background-size: 129px;
 	background-position: 28px center;
 	background-repeat: no-repeat;
 	padding-left: 170px; /*Space for logo*/
+	text-shadow: 2px 2px 2px #5A4614	;
+	
 }
 
 /*Make quote text reasonable*/
