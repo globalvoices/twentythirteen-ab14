@@ -110,10 +110,16 @@ h1 {
 	padding-left: 170px; /*Space for logo*/
 	text-shadow: 2px 2px 2px #5A4614	;
 }
-.site-description {
-	font-style: normal;
+.main-sponsor {
+	max-width: 220px;
 }
-
+.sponsors img {
+	max-width: 110px;
+}
+/*Every second one (left column) gets right margin*/
+.sponsors img:nth-child(even){
+	margin-right: 30px;
+}
 /*Make quote text reasonable*/
 .entry-content blockquote {
 	font-size: 20px;
