@@ -66,7 +66,9 @@ h1 {
 	background-repeat: no-repeat;
 	padding-left: 170px; /*Space for logo*/
 	text-shadow: 2px 2px 2px #5A4614	;
-	
+}
+.site-description {
+	font-style: normal;
 }
 
 /*Make quote text reasonable*/
@@ -85,7 +87,9 @@ ul.nav-menu, div.nav-menu > ul {
 .menu-toggle {
 	padding-right: 20px;
 }
-
+.site-footer .site-info {
+	display: none;
+}
 
 @media (max-width: 999px) {
 	/*Make header icon, title and desc smaller*/
