@@ -113,6 +113,9 @@ h1 {
 .main-sponsor {
 	max-width: 220px;
 }
+.textwidget .main-sponsor {
+	margin-top: -10px;
+}
 .sponsors img {
 	max-width: 110px;
 }
