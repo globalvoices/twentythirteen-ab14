@@ -24,19 +24,62 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*In-Post RTL classes*/
 
 /*Make default and .rtl text use Droid Arabic*/
-.rtl,
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Droid Arabic Kufi', 'Ubuntu';
+h1, h2, h3, h4, h5, h6m,
+.site-description,
+.format-link .entry-title,
+.attachment .entry-title,
+.author-description .author-title,
+.archive-title,
+.archive-meta,
+.page-title,
+.comments-title,
+.comment-reply-title,
+.widget .widget-title,
+.menu-toggle,
+html,
+button,
+input,
+select,
+textarea,
+.rtl{
+	font-family: 'Droid Arabic Kufi', 'Ubuntu', sans-serif;
 }
 /*Use Ubuntu for LTR and override heading font*/
 .ltr,
 .ltr h1, .ltr h2, .ltr h3, .ltr h4, .ltr h5 {
 	font-family: 'Ubuntu', sans-serif;
 }
-/*Inherit font-family for things with specified font that we want to be Droid Arabic*/
-.site-description {
-	font-family: inherit !important;
+/*Remove italic from everything because Droid Arabic doesn't support it''*/
+blockquote,
+address,
+.wp-caption .wp-caption-text,
+.entry-caption,
+.gallery-caption,
+.site-description,
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a,
+.page-links,
+.format-link .entry-title,
+.format-quote blockquote,
+.format-status .entry-content,
+.attachment .entry-title,
+.paging-navigation a,
+.post-navigation,
+.author-description .author-title,
+.archive-title,
+.archive-meta,
+.page-title,
+.comments-title,
+.comment-reply-title,
+.comment-navigation,
+.no-comments,
+.widget .widget-title,
+dfn {
+	font-style: normal;
 }
+
 /*Make bold stuff 100 to use light versions of Droid Arabic and Ubuntu*/
 h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
 	font-weight: 100;
