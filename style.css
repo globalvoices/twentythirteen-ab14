@@ -117,8 +117,10 @@ h1 {
 	max-width: 110px;
 }
 /*Every second one (left column) gets right margin*/
-.sponsors img:nth-child(even){
+/*Every second one (left column) gets right margin*/
+.sponsors :nth-child(even){
 	margin-right: 30px;
+	display: inline-block;
 }
 /*Make quote text reasonable*/
 .entry-content blockquote {
