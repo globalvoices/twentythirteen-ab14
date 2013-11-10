@@ -80,6 +80,28 @@ dfn {
 	font-style: normal;
 }
 
+/*Make Links Blue*/
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a,
+.entry-meta a,
+.entry-meta a:hover,
+.entry-content a,
+.comment-content a,
+.format-link .entry-title a,
+.navigation a,
+.comment-author .fn,
+.comment-author .url,
+.comment-reply-link,
+.comment-reply-login ,
+.widget a {
+	/*color: #bc360a;*/
+	/*color: #3F96DA;*/
+	
+
+}
+
 /*Make bold stuff 100 to use light versions of Droid Arabic and Ubuntu*/
 h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
 	font-weight: 100;
