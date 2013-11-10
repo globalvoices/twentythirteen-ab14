@@ -130,7 +130,9 @@ h1 {
 	background-position: 28px center;
 	background-repeat: no-repeat;
 	padding-left: 170px; /*Space for logo*/
-	text-shadow: 2px 2px 2px #5A4614	;
+	/*text-shadow: 2px 2px 2px #5A4614	;*/
+	text-shadow: 2px 2px 2px #334049;
+
 }
 .main-sponsor {
 	max-width: 220px;
@@ -138,7 +140,7 @@ h1 {
 .textwidget .main-sponsor {
 	margin-top: -10px;
 }
-.sponsors img {
+.textwidget .sponsors img {
 	max-width: 110px;
 }
 /*Every second one (left column) gets right margin*/
