@@ -105,18 +105,26 @@ function gv_custom_metadata_manager_admin_init() {
 	/**
 	 * Register a group for pages and posts
 	 */
-	x_add_metadata_group('gv_custom_metadata_posts', array('post'), array(
-		'label' => 'Language Settings',
+	x_add_metadata_group('gv_custom_metadata_posts', array('post', 'page'), array(
+		'label' => 'Post Settings (Global Voices)',
 		'priority' => 'high',
 	));
 	/**
 	 * Extra-wide switch, pages only
 	 */
-	x_add_metadata_field( 'gv-ltr', array('post'), array(
+	x_add_metadata_field( 'gv-ltr', array('post', 'page'), array(
 		'group' => 'gv_custom_metadata_posts',
-		'label' => 'ENGLISH POST: Display this post as left-to-right (Assumes the site is RTL/right-to-left)',
+		'label' => 'ENGLISH/LTR: Check this box to display this post as left-to-right (Assumes the site is RTL/right-to-left)',
 		'field_type' => 'checkbox',
 	));
+	/**
+	 * Extra-wide switch, pages only
+	 */
+	x_add_metadata_field('gv-extra-wide', array('post', 'page'), array(
+		'group' => 'gv_custom_metadata_posts',
+		'label' => 'Full-width content (hide sidebar and fill space with content)',
+		'field_type' => 'checkbox',
+	));	
 }
 add_action( 'admin_init', 'gv_custom_metadata_manager_admin_init' );
 
