@@ -25,6 +25,61 @@ function gv_filter_post_classes_ltr ($classes, $class, $post_id) {
 add_filter('post_class', 'gv_filter_post_classes_ltr', 10, 3);
 
 /**
+ * Filter post class to add .extra-wide if the 'gv-extra-wide' postmeta is true
+ * 
+ * Expects a metabox in the post editor with checkbox for gv-extra-wide". 
+ * Depends on CSS to use .extra-wide to remove max-width.
+ * 
+ * Only affects single.php/page.php to avoid mucking in main posts well of homepage 
+ * 
+ * @param string $classes Other classes that will be shown
+ * @param string $class Classes specified in the post_class() call (NOT IMPORTANT)
+ * @param integer $post_id 
+ * @return string List of classes with ours added if necessary
+ */
+function gv_filter_post_classes_extra_wide ($classes, $class, $post_id) {
+
+	/**
+	 * Only add the class on single/page views and only for the main post
+	 */
+	if (!is_singular() OR ($post_id != get_queried_object_id()))
+		return $classes;
+	
+	$is_rtl = get_post_meta($post_id, 'gv-extra-wide', true);
+	if ($is_rtl)
+		$classes[] = 'extra-wide';
+	return $classes;
+}
+add_filter('post_class', 'gv_filter_post_classes_extra_wide', 10, 3);
+
+/**
+ * Filter 'sidebars_widgets' (currently active widgets) to clear out sidebar-2 if gv-extra-wide
+ * 
+ * Ensures that sidebar-2 (the actual "sidebar" of twentythirteen) is not displayed when the 
+ * gv-extra-wide checkbox is ticked so that there's space for the extra-wide content.
+ * 
+ * @param array $sidebars_widgets All sidebars and the widgets they contain
+ * @return type
+ */
+function gv_filter_sidebars_widgets_extra_wide($sidebars_widgets) {
+	
+	// Exit if sidebar-2 is already empty
+	if (!isset($sidebars_widgets['sidebar-2']) OR !count($sidebars_widgets['sidebar-2']))
+		return $sidebars_widgets;
+	
+	// Only continue if we're on single.php or page.php
+	if (!is_singular())
+		return $sidebars_widgets;
+	
+	// If gv-extra-wide postmeta is true dump all widgets from sidebar-2
+	if (get_post_meta(get_queried_object_id(), 'gv-extra-wide', true))
+		unset($sidebars_widgets['sidebar-2']);
+
+	return $sidebars_widgets;
+}
+add_filter('sidebars_widgets', 'gv_filter_sidebars_widgets_extra_wide', 10, 3);
+
+/**
  * Register sidebars for GV News Theme.
  * Runs during 'init' action
  */
