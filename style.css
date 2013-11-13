@@ -98,8 +98,15 @@ dfn {
 .widget a {
 	/*color: #bc360a;*/
 	/*color: #3F96DA;*/
-	
-
+}
+/*gv-extra-wide: If post as .extra-wide class*/
+.extra-wide .entry-header,
+.extra-wide .entry-content,
+.extra-wide .entry-summary,
+.extra-wide .entry-meta {
+	max-width: 1080px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /*Make bold stuff 100 to use light versions of Droid Arabic and Ubuntu*/
