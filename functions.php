@@ -4,8 +4,28 @@
  * Functions.php file for twentythirteen-ab14
  */
 
-// Disable Jetpack opengraph because gv plugin will do it for us
-add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
+/**
+ * Stuff to do only if GV plugin is active
+ */
+if (function_exists('gv_get_dir')) :
+
+	/**
+	 * Filter the og:image (facebook/g+) default icon to be an Advocacy logo
+	 * 
+	 * @param string $icon Default icon
+	 * @return string desired icon
+	 */
+	function gvadvocacy_theme_gv_og_image_default($icon) {
+		return get_stylesheet_directory_uri() . "/ab14-icon-800.png";
+	}
+	add_filter('gv_og_image_default', 'gvadvocacy_theme_gv_og_image_default');
+	
+	/**
+	 *  Disable Jetpack opengraph because gv plugin will do it for us
+	 */
+	add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
+	
+endif;
 
 /**
  * Filter post class to add .ltr if the 'gv-ltr' postmeta is true
