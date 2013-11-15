@@ -4,6 +4,8 @@
  * Functions.php file for twentythirteen-ab14
  */
 
+// Disable Jetpack opengraph because gv plugin will do it for us
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
 
 /**
  * Filter post class to add .ltr if the 'gv-ltr' postmeta is true
