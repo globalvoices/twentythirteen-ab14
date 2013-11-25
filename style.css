@@ -15,6 +15,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 @import url("../twentythirteen/style.css");
+@import url("../twentythirteen/rtl.css");
 
 /*Google fonts for 'Droid Arabic Kufi' and 'Ubuntu'*/
 @import  "http://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
@@ -161,17 +162,7 @@ h1 {
 	font-size: 20px;
 }
 
-/*Fix header menu so search, pages and menu button fit right*/
-.site-header .search-form {
-	right: auto;
-	left: 20px;
-}
-ul.nav-menu, div.nav-menu > ul {
-	padding: 0 0 0 40px;
-}
-.menu-toggle {
-	padding-right: 20px;
-}
+/*Hide WP Promo footer*/
 .site-footer .site-info {
 	display: none;
 }
