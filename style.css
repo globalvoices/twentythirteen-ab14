@@ -115,10 +115,18 @@ h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
 	font-weight: 100;
 }
 /*General LTR class for use in posts/widgets*/
-.ltr {
+.ltr{
 	text-align: left;
 	direction: ltr;
 }
+.ltr caption, .ltr th, .ltr td {
+	text-align: left;
+	direction: ltr;
+}
+.ltr ol, .ltr ul {
+padding: 0 0 0 40px;
+}
+
 /*In-post RTL classes for LTR posts*/
 .entry .arabic,
 .entry .hebrew,
@@ -126,6 +134,25 @@ h1, h2, h3, h4, h5, h6, .site-title, .entry-title {
 	text-align: right;
 	direction: rtl;
 }
+
+/*Schedule table styles*/
+.schedule td {
+	vertical-align: top;
+}
+.schedule .activity-type {
+	padding: .25em .5em ;
+	color: #fff;
+}
+.schedule .discussion.activity-type {
+	background-color: #4B9B01;
+}
+.schedule .motion.activity-type {
+	background-color: #DB572F;
+}
+.schedule .debate.activity-type {
+	background-color: #722D19;
+}
+
 /*Site title text size*/
 h1 {
 	font-size: 40px;
