@@ -135,6 +135,16 @@ padding: 0 0 0 40px;
 	direction: rtl;
 }
 
+/*Thick bottom margin for floated images and captions*/
+img.alignleft,
+.wp-caption.alignleft,
+img.alignright,
+.wp-caption.alignright,
+img.aligncenter,
+img.alignnone {
+	margin-bottom: 24px;
+}
+
 /*Schedule table styles*/
 .schedule td {
 	vertical-align: top;
