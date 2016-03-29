@@ -18,8 +18,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url("../twentythirteen/rtl.css");
 
 /*Google fonts for 'Droid Arabic Kufi' and 'Ubuntu'*/
-@import  "http://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
-@import  "http://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic";
+@import  "https://fonts.googleapis.com/earlyaccess/droidarabickufi.css";
+@import  "https://fonts.googleapis.com/css?family=Ubuntu:300,400,700,300italic,400italic,700italic";
 
 /*http://www.google.com/fonts/earlyaccess*/
 /*In-Post RTL classes*/
